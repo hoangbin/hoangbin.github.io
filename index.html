@@ -17,6 +17,7 @@
       if (event.origin !== 'https://hoangbin.github.io/')
         return;
         
+        console.log(event.data.text);
         document.getElementById('receiveData').innerHTML = event.data.text;
     
     }, false)
