@@ -10,7 +10,9 @@
         </iframe>
         
         <script>
+          console.log('ssss');
             window.addEventListener('message', function(event) {
+              console.log('dd');
               console.log(event.origin);
            if(event.origin !== 'https://hoangbin.github.io/')
            return;
