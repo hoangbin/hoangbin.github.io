@@ -16,8 +16,8 @@
     window.addEventListener('message', function(event) {
       if (event.origin !== 'https://hoangbin.github.io/')
         return;
-        
-        console.log(event.data.text);
+
+        console.log(event.data);
         document.getElementById('receiveData').innerHTML = event.data.text;
     
     }, false)
