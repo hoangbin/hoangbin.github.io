@@ -2,19 +2,19 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <title>Parent page</title>
+            <title>Parent page</title>
     </head>
     <body>
         <h1>Parent page</h1>
-        <iframe id="iframe" src="https://hoangbin.github.io/iframe/index.html" height="600" width="800">
+        <iframe id="iframe" shttps://hoangbin.github.io/iframe/index.htmlh" height="600" width="800">
         </iframe>
         
         <script>
             window.addEventListener('message', function(event) {
+              console.log(event.origin);
            if(event.origin !== 'https://hoangbin.github.io/')
            return;
-           
-           console.log(event.data)
+
            
           }, false)
           
