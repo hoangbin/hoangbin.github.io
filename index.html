@@ -1,25 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-            <title>Parent page</title>
-    </head>
-    <body>
-        <h1>Parent page</h1>
-        <iframe id="iframe" src="https://hoangbin.github.io/iframe/index.html" height="600" width="800">
-        </iframe>
-        
-        <script>
-          console.log('ssss');
-            window.addEventListener('message', function(event) {
-              console.log('dd');
-              console.log(event.origin);
-           if(event.origin !== 'https://hoangbin.github.io/')
-           return;
 
-           
-          }, false)
-          
-        </script>
-    </body>
+<head>
+  <meta charset="utf-8">
+  <title>Parent page</title>
+</head>
+
+<body>
+  <h1>Parent page</h1>
+  <p>Data: <span id="receiveData">Not receive</span></p>
+  <iframe id="iframe" src="https://hoangbin.github.io/iframe/index.html" height="600" width="800">
+  </iframe>
+
+  <script>
+    window.addEventListener('message', function(event) {
+      if (event.origin !== 'https://hoangbin.github.io/')
+        return;
+        
+        document.getElementById('receiveData').innerHTML = event.data.text;
+    
+    }, false)
+
+  </script>
+</body>
+
 </html>
