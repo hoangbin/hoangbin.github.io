@@ -12,7 +12,6 @@
     <script>
         document.getElementById('my-btn').addEventListener('click', handleButtonClick, false);
         function handleButtonClick(e) {
-            alert('dd')
             window.parent.postMessage({text: 'Test Post message'}, "https://hoangbin.github.io");
         }
     </script>
