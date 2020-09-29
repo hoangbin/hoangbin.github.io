@@ -14,10 +14,11 @@
 
   <script>
     window.addEventListener('message', function(event) {
+      console.log(event.data);
       if (event.origin !== 'https://hoangbin.github.io/')
         return;
 
-        console.log(event.data);
+        
         document.getElementById('receiveData').innerHTML = event.data.text;
     
     }, false)
