@@ -14,9 +14,9 @@
 
   <script>
     window.addEventListener('message', function(event) {
-      console.log(event.data.text);
+      console.log(event.origin);
       console.log( document.getElementById('receiveData'));
-      document.getElementById('receiveData').innerText = event.data.text;
+      document.getElementById('receiveData').innerHTML = '<b>'+event.data.text+'</b>';
       if (event.origin !== 'https://hoangbin.github.io/')
         return;
 
